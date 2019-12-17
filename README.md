@@ -16,7 +16,7 @@ Maria needs an analysis on school performance in the school district.  She requi
     - The bottom five performing schools are (ranking from lowest): Rodriguez, Figueroa, Huang, Johnson, and Ford
       - their average math scores are below 77.1 and average reading scores are below 81.2
       - % Overall Passing is below 73.8% (% Overall Passing Corrected is 54.3%)
-  3. Counter-intuitively, schools that spend on the lower end per student (<$584 per student) show the highest % Overall Passing %.
+  3. Counter-intuitively, schools that spend on the lower end per student (<$584 per student) show the highest % Overall Passing.
      - The schools in <$584 category are all Charter schools.
   4. Large schools with 2000-5000 students perform worse than Small (<1000) and Medium (1000-2000) sized schools in % Overall Passing at 76% (58% corrected).
      - Small and Medium-sized schools have the same % Overall Passing at 95% in the initial findings.
@@ -25,7 +25,7 @@ Maria needs an analysis on school performance in the school district.  She requi
      
 # Challenge 4
 ## Changes Required
-Maria and her supervisor have discovered that the score averages for ninth graders from Thomas High School are incorrect.  Maria requested to re-run the analysis with the Thomas High School ninth-grader math and reading scores to be removed, but keeping these students in the data.
+Maria and her supervisor have discovered that the score averages for ninth graders from Thomas High School are incorrect.  Maria requested to re-run the analysis with the Thomas High School ninth-grader math and reading scores removed, but keep these students in the data.
 
 ## Refactoring Implemented
 1.  I created another copy of the original student DataFrame so I could remove necesssary scores for the secondary analysis without affecting the original analysis.
@@ -36,20 +36,20 @@ Maria and her supervisor have discovered that the score averages for ninth grade
 ##  Challenge Findings
 1.  There are 461 Thomas High School ninth-graders whose math and reading scores were removed.  This group is about 1% of the total students in the district.
 2.  District Summary did not change much.  
-    - The Average Math Score decreased by 0.1, now 78.9.
+    - The Average Math Score decreased by 0.1, now at 78.9.
     - The Average Reading Score did not change
     - The Math Passing %, Reading Passing %, % Overall Passing and % Overall Passing Corrected all decreased by 1%
-3.  In School Summary, only Thomas High School summary changed significantly.
+3.  In the School Summary, only Thomas High School's outcome changed significantly.
     - The Average Math Score did not change and the Average Reading Score increased by only 0.1 with the removal of ninth-graders.
     - However, the passing percentages decreased significantly without the ninth-grader scores
        - % Passing Math dropped 26% to 67%
        - % Passing Reading dropped 27% to 70%
        - % Overall Passing dropped 27% to 68%
-       - % Overall Passing Corrected % dropped 26% to 65%
-4.  The removal of Thomas High School ninth-grader scores significant affected school's performance relative to other schools in the district.
-     -  Thomas High School used to be the Number 2 Ranked school in the district and now is the worst school in the ranking.
-5.  With the removal of ninth-grader scores, Thomas High School has no scores for the 9th grade when compared to other schools by grades.  Its tenth to twelfth grade average scores remained the unchanged.
-6.  Thomas High School spend on average $638.00 per student.  As a result, $630-644 spending per student category saw a 6-7% drop in the % Passing Math, % Passing Reading, % Overall Passing, and % Overall Passing Corrected metrics.
+       - % Overall Passing Corrected dropped 26% to 65%
+4.  The removal of Thomas High School ninth-grader scores significantly affected the school's performance relative to other schools in the district.
+     -  Thomas High School used to be the Number 2 Ranked school in the district, and now is the worst school in the ranking.
+5.  With the removal of ninth-grader scores, Thomas High School has no scores for the 9th grade when compared to other schools by grades.  Its tenth to twelfth grade average scores remained unchanged.
+6.  Thomas High School spend $638.00 on average per student.  As a result, $630-644 spending per student category shows a 6-7% drop in the % Passing Math, % Passing Reading, % Overall Passing, and % Overall Passing Corrected metrics.
      - Average Math Score and Average Reading Score are unchanged for the spending category
 7.  Thomas High School is a medium-sized school.  Therefore, medium-sized schools show a 5% decrease in % Overall Passing (now at 90%), or a 6% decrease in % Overall Passing Corrected (now at 85%).
       - Average Math Score and Average Reading Score are unchanged for medium-sized schools
